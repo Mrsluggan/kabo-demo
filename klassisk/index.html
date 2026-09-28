@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kåbo Restaurang & Pizzeria – god pizza i Uppsala</title>
+<meta name="description" content="Din lokala pizzeria i Kåbo, Uppsala. Pizza, kebab, pasta, sallader, hamburgare och à la carte. Lunch vardagar 11–14.">
+<meta property="og:title" content="Kåbo Restaurang & Pizzeria">
+<meta property="og:description" content="Pizza, kebab och à la carte på Döbelnsgatan 12 i Uppsala.">
+<meta property="og:image" content="https://kabopizzeria.se/wp-content/uploads/2019/06/pizza_header.jpg">
+<link rel="icon" href="../img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Kåbo Restaurang & Pizzeria",
+  "image": "https://kabopizzeria.se/wp-content/uploads/2019/06/logo.jpg",
+  "telephone": "+4618512525",
+  "servesCuisine": ["Pizza", "Kebab", "Pasta"],
+  "priceRange": "99–260 kr",
+  "menu": "https://kabopizzeria.se/#meny",
+  "address": {"@type": "PostalAddress", "streetAddress": "Döbelnsgatan 12", "postalCode": "752 37", "addressLocality": "Uppsala", "addressCountry": "SE"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "21:00"}
+  ],
+  "sameAs": ["https://www.facebook.com/kabobaropizzeria/"]
+}
+</script>
+<style>
+:root{
+  --paper:#f5eee1; --paper-2:#ece2cf; --ink:#1c1916; --ink-2:#4a433a; --rule:#cdbfa6;
+  --gold:#f2a900; --red:#b3321c; --black:#151311;
+  --head:"Oswald", "Arial Narrow", sans-serif;
+  --body:"Lora", Georgia, serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:110px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 var(--body)}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.1;margin:0}
+h2{font-size:clamp(30px,4vw,40px);margin-bottom:8px}
+p{margin:0 0 1em}
+
+.btn{display:inline-block;font:500 17px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;text-decoration:none;padding:15px 24px;border:2px solid var(--black);border-radius:3px;background:var(--black);color:#fff}
+.btn:hover{background:#000}
+.btn.light{background:transparent;color:var(--black)}
+.btn.light:hover{background:var(--black);color:#fff}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--black)}
+
+/* topbar + header */
+.topbar{background:var(--black);color:#e9dfcd;font-size:14px}
+.topbar .wrap{display:flex;gap:24px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar a{text-decoration:none}
+.topbar .today{margin-left:auto}
+.topbar .today b{color:var(--gold);font-weight:600}
+header{background:var(--paper);border-bottom:3px solid var(--black);position:sticky;top:0;z-index:20}
+header .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:54px;height:54px}
+.logo span{font:600 22px/1 var(--head);text-transform:uppercase}
+header nav{margin-left:auto;display:flex;gap:26px}
+header nav a{font:500 16px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;text-decoration:none}
+header nav a:hover{color:var(--red)}
+header .btn{padding:11px 18px;font-size:15px}
+@media (max-width:760px){
+  header nav{display:none}
+  header .btn{margin-left:auto}
+  .topbar .addr{display:none}
+  .topbar .today{margin-left:0}
+}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1.15fr;min-height:520px;border-bottom:3px solid var(--black)}
+.intro-text{padding:56px 48px 56px max(20px, calc((100vw - 1100px)/2 + 20px));display:flex;flex-direction:column;justify-content:center}
+.intro-text h1{font-size:clamp(44px,6vw,72px);line-height:1}
+.intro-text .sub{font:500 18px/1.3 var(--head);text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin:10px 0 22px}
+.intro-text p{max-width:42ch;color:var(--ink-2)}
+.intro-text .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.intro-text .small{font-size:15px;color:var(--ink-2);margin-top:16px}
+.intro-photo{background:#3a2a18 url("https://kabopizzeria.se/wp-content/uploads/2019/06/pizza_header.jpg") center/cover}
+@media (max-width:860px){
+  .intro{grid-template-columns:1fr}
+  .intro-photo{height:280px;order:-1}
+  .intro-text{padding:36px 20px 40px}
+}
+
+/* lunch */
+.lunch{background:var(--gold);border-bottom:3px solid var(--black)}
+.lunch .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;padding-top:40px;padding-bottom:40px}
+.lunch h2{font-size:clamp(34px,5vw,52px);margin:0}
+.lunch .when{font:500 18px/1.2 var(--head);text-transform:uppercase;letter-spacing:.05em;margin-top:6px}
+.lunch p{margin:0;max-width:46ch}
+.lunch .pris{font:600 64px/1 var(--head)}
+.lunch .pris small{display:block;font:400 15px/1.3 var(--body);text-align:right}
+@media (max-width:760px){.lunch .wrap{grid-template-columns:1fr;gap:14px}.lunch .pris{font-size:52px}.lunch .pris small{text-align:left}}
+
+/* menu */
+#meny{padding:64px 0 40px}
+.menu-intro{display:flex;justify-content:space-between;gap:30px;align-items:flex-end;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:20px}
+.menu-intro p{margin:0;max-width:52ch;color:var(--ink-2);font-size:15px}
+.jump{position:sticky;top:75px;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule);padding:12px 0;display:flex;align-items:center;gap:18px}
+.jump nav{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;flex:1}
+.jump nav::-webkit-scrollbar{display:none}
+.jump nav a{flex:none;font:500 15px/1.8 var(--head);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;color:var(--ink-2);border-bottom:2px solid transparent}
+.jump nav a.on{color:var(--ink);border-color:var(--red)}
+.jump input{width:210px;font:15px var(--body);padding:8px 10px;border:1px solid var(--rule);border-radius:3px;background:#fffaf1;color:var(--ink)}
+.jump input:focus{outline:2px solid var(--gold);border-color:var(--black)}
+@media (max-width:760px){.menu-intro{display:block}.menu-intro h2{margin-bottom:10px}.jump{flex-direction:column;align-items:stretch;gap:8px}.jump input{width:100%}}
+
+.cat{padding-top:44px}
+.cat-title{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--black);padding-bottom:8px;margin-bottom:6px}
+.cat-title h3{font-size:26px}
+.cat-title .p{margin-left:auto;font:600 22px/1 var(--head);color:var(--red);white-space:nowrap}
+.cat-title .p small{font:italic 400 14px var(--body);color:var(--ink-2);margin-left:6px}
+.cat-note{font-style:italic;color:var(--ink-2);font-size:15px;margin:8px 0 4px}
+.list{display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.row{display:grid;grid-template-columns:34px 1fr auto;gap:0 10px;padding:11px 0;border-bottom:1px dotted var(--rule)}
+.row .n{font:500 16px/1.5 var(--head);color:var(--red)}
+.row .name{font-weight:600}
+.row .v{font:italic 400 13px var(--body);color:#3f7a3a;margin-left:4px}
+.row .pr{font:500 17px/1.5 var(--head);white-space:nowrap}
+.row .d{grid-column:2 / 4;font-style:italic;color:var(--ink-2);font-size:15px;line-height:1.4}
+.none{display:none;padding:30px 0;font-style:italic;color:var(--ink-2)}
+@media (max-width:760px){.list{grid-template-columns:1fr}}
+
+/* beställ */
+#bestall{background:var(--paper-2);border-top:3px solid var(--black);border-bottom:3px solid var(--black);padding:56px 0}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:24px}
+.ways h3{font-size:21px;margin-bottom:8px}
+.ways p{color:var(--ink-2);font-size:16px}
+.ways .foodora{height:34px;width:auto;margin:4px 0 14px}
+@media (max-width:760px){.ways{grid-template-columns:1fr;gap:28px}}
+
+/* hitta hit */
+#hitta{padding:56px 0 64px}
+.visit{display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
+.hours{width:100%;border-collapse:collapse;margin:12px 0 26px;font-size:16px}
+.hours td{padding:7px 0;border-bottom:1px dotted var(--rule)}
+.hours td:last-child{text-align:right;font-family:var(--head);font-size:17px}
+.hours tr.today td{font-weight:600;color:var(--red)}
+.visit address{font-style:normal;margin-bottom:14px}
+.visit .info{font-size:15px;color:var(--ink-2);font-style:italic}
+.map{border:3px solid var(--black);min-height:360px}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+@media (max-width:760px){.visit{grid-template-columns:1fr;gap:28px}}
+
+footer{background:var(--black);color:#bfb4a0;font-size:14px;padding:28px 0 100px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (min-width:761px){footer{padding-bottom:28px}}
+
+.callbar{display:none}
+@media (max-width:760px){
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;border-top:3px solid var(--black)}
+  .callbar a{text-align:center;padding:16px 8px calc(16px + env(safe-area-inset-bottom));font:500 16px/1 var(--head);text-transform:uppercase;letter-spacing:.05em;text-decoration:none;background:var(--paper)}
+  .callbar a + a{background:var(--black);color:#fff}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="addr">Döbelnsgatan 12, Uppsala</span>
+    <a href="tel:+4618512525">018-51 25 25</a>
+    <span class="today" id="today">Mån–lör 11–21 · sön 12–21</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><img src="../img/logo.jpg" alt=""><span>Kåbo Pizzeria</span></a>
+    <nav>
+      <a href="#meny">Meny</a>
+      <a href="#lunch">Lunch</a>
+      <a href="#bestall">Hemkörning</a>
+      <a href="#hitta">Hitta hit</a>
+    </nav>
+    <a class="btn" href="https://order.kabopizzeria.se/menu.aspx" target="_blank" rel="noopener">Beställ online</a>
+  </div>
+</header>
+
+<main>
+<section class="intro">
+  <div class="intro-text">
+    <h1>Kåbo Restaurang &amp; Pizzeria</h1>
+    <div class="sub">Pizza · Kebab · Pasta · À la carte</div>
+    <p>Varmt välkomna till oss på Döbelnsgatan 12. Ät hos oss, hämta med dig hem eller beställ hemkörning.</p>
+    <div class="actions">
+      <a class="btn" href="https://order.kabopizzeria.se/menu.aspx" target="_blank" rel="noopener">Beställ online</a>
+      <a class="btn light" href="tel:+4618512525">Ring 018-51 25 25</a>
+    </div>
+    <p class="small">Just nu 10% rabatt när du beställer via vår hemsida.</p>
+  </div>
+  <div class="intro-photo" role="img" aria-label="Pizza"></div>
+</section>
+
+<section class="lunch" id="lunch">
+  <div class="wrap">
+    <div>
+      <h2>Dagens lunch</h2>
+      <div class="when">Vardagar 11.00–14.00</div>
+    </div>
+    <p>Pizza nr 1–22, husmanskost, kebabrätter och sallader. Salladsbuffé, bröd, smör, dryck och kaffe ingår.</p>
+    <div class="pris">119:-<small>inkl. dryck & kaffe</small></div>
+  </div>
+</section>
+
+<section id="meny">
+  <div class="wrap">
+    <div class="menu-intro">
+      <h2>Meny</h2>
+      <p>Tomatsås och ost ingår i alla pizzor. Glutenfri pizzabotten +20:-. I alla serveringspriser ingår salladsbuffé. Allergisk? Fråga oss om ingredienserna.</p>
+    </div>
+    <div class="jump">
+      <nav id="jump">
+<a href="#pizza1">Pizza 1–12</a><a href="#pizza2">Pizza 13–22</a><a href="#pizza3">Pizza 23–30</a><a href="#pizza4">Pizza 31–39</a><a href="#special">Specialpizzor</a><a href="#pan">Pan pizza</a><a href="#kebab">Kebab</a><a href="#vegkebab">Vegansk kebab</a><a href="#burger">Hamburgare</a><a href="#sallad">Sallader</a><a href="#pasta">Pastarätter</a><a href="#alacarte">À la carte</a><a href="#extra">Tillbehör</a>
+</nav>
+      <input id="q" type="search" placeholder="Sök i menyn…" aria-label="Sök i menyn">
+    </div>
+    <div id="menu">
+      <div class="cat" id="pizza1">
+        <div class="cat-title">
+          <h3>Pizzor 1–12</h3>
+          <span class="p">119:- <small>familj 250:-</small></span>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">1</span><span class="name">Margherita <span class="v">(vegetarisk)</span></span><span class="d">ost</span></div>
+          <div class="row"><span class="n">2</span><span class="name">Vesuvio</span><span class="d">skinka</span></div>
+          <div class="row"><span class="n">3</span><span class="name">Fungi <span class="v">(vegetarisk)</span></span><span class="d">färska champinjoner</span></div>
+          <div class="row"><span class="n">4</span><span class="name">Capricciosa</span><span class="d">skinka, färska champinjoner</span></div>
+          <div class="row"><span class="n">5</span><span class="name">Bussola</span><span class="d">skinka, räkor</span></div>
+          <div class="row"><span class="n">6</span><span class="name">Al tonno</span><span class="d">lök, tonfisk</span></div>
+          <div class="row"><span class="n">7</span><span class="name">Calzone (inbakad)</span><span class="d">skinka</span></div>
+          <div class="row"><span class="n">8</span><span class="name">Hawaii</span><span class="d">skinka, ananas</span></div>
+          <div class="row"><span class="n">9</span><span class="name">Orientale</span><span class="d">lök, köttfärs</span></div>
+          <div class="row"><span class="n">10</span><span class="name">Opera</span><span class="d">skinka, tonfisk</span></div>
+          <div class="row"><span class="n">11</span><span class="name">Marinara</span><span class="d">räkor, musslor</span></div>
+          <div class="row"><span class="n">12</span><span class="name">Campagnola</span><span class="d">salami, lök</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="pizza2">
+        <div class="cat-title">
+          <h3>Pizzor 13–22</h3>
+          <span class="p">125:- <small>familj 260:-</small></span>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">13</span><span class="name">La Pela</span><span class="d">skinka, champinjoner, räkor</span></div>
+          <div class="row"><span class="n">14</span><span class="name">Calzone special (inbakad)</span><span class="d">skinka, räkor</span></div>
+          <div class="row"><span class="n">15</span><span class="name">Quattro stagioni</span><span class="d">skinka, champinjoner, räkor, kronärtskockor, oliver</span></div>
+          <div class="row"><span class="n">16</span><span class="name">Vegitala</span><span class="d">champinjoner, ananas, paprika, lök, tomat, kronärtskockor, oliver</span></div>
+          <div class="row"><span class="n">17</span><span class="name">Havet special</span><span class="d">räkor, musslor, tonfisk</span></div>
+          <div class="row"><span class="n">18</span><span class="name">Du chef</span><span class="d">köttfärs, champinjoner, lök, tabasco</span></div>
+          <div class="row"><span class="n">19</span><span class="name">Hawaii special</span><span class="d">skinka, ananas, banan, curry</span></div>
+          <div class="row"><span class="n">20</span><span class="name">Orientale special</span><span class="d">köttfärs, lök, bacon, ägg</span></div>
+          <div class="row"><span class="n">21</span><span class="name">Milan</span><span class="d">skinka, salami, bacon, lök</span></div>
+          <div class="row"><span class="n">22</span><span class="name">Fyra ostar <span class="v">(vegetarisk)</span></span><span class="d">fetaost, gorgonzolaost, mozzarellaost, halloumi</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="pizza3">
+        <div class="cat-title">
+          <h3>Pizzor 23–30</h3>
+          <span class="p">135:- <small>familj 310:-</small></span>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">23</span><span class="name">Indiana</span><span class="d">kyckling, champinjoner, paprika, lök, kebabsås</span></div>
+          <div class="row"><span class="n">24</span><span class="name">Chanti</span><span class="d">kyckling, ananas, banan, curry</span></div>
+          <div class="row"><span class="n">25</span><span class="name">Kebabpizza</span><span class="d">kebabkött, lök, tomat, feferoni, kebabsås</span></div>
+          <div class="row"><span class="n">26</span><span class="name">Ibbe special</span><span class="d">kebabkött, skinka, lök, feferoni, kebabsås</span></div>
+          <div class="row"><span class="n">27</span><span class="name">Vikingbåt (halvinbakad)</span><span class="d">kebabkött, isbergssallad, lök, tomat, feferoni, kebabsås</span></div>
+          <div class="row"><span class="n">28</span><span class="name">Azteka</span><span class="d">skinka, jalapeños, tacosås, tacokryddmix, vitlökssås</span></div>
+          <div class="row"><span class="n">29</span><span class="name">Mexicana</span><span class="d">köttfärs, lök, jalapeños, färsk vitlök, tacosås, tacokryddmix</span></div>
+          <div class="row"><span class="n">30</span><span class="name">Gyrospizza</span><span class="d">gyroskött, lök, tomat, feferoni, kebabsås</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="pizza4">
+        <div class="cat-title">
+          <h3>Pizzor 31–39</h3>
+          <span class="p">145:- <small>familj 330:-</small></span>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">31</span><span class="name">Ciao Ciao (halvinbakad)</span><span class="d">oxfilé, lök, tomat, bearnaisesås</span></div>
+          <div class="row"><span class="n">32</span><span class="name">Dubbel Calzone special</span><span class="d">dubbelinbakad, skinka, räkor</span></div>
+          <div class="row"><span class="n">33</span><span class="name">LIVA special</span><span class="d">oxfilé, champinjoner, paprika, lök, tomat, bearnaisesås</span></div>
+          <div class="row"><span class="n">34</span><span class="name">Gorgonzola</span><span class="d">oxfilé, paprika, tomat, gorgonzolaost, bearnaisesås</span></div>
+          <div class="row"><span class="n">35</span><span class="name">Kåbo special</span><span class="d">fläskfilé, champinjoner, färska tomater, lök, paprika, bearnaisesås</span></div>
+          <div class="row"><span class="n">36</span><span class="name">Husets special</span><span class="d">fläskfilé, skinka, lök, tomater, bearnaisesås</span></div>
+          <div class="row"><span class="n">37</span><span class="name">Acapulco</span><span class="d">oxfilé, champinjoner, lök, jalapeños, tacosås, vitlök, tacokryddmix</span></div>
+          <div class="row"><span class="n">38</span><span class="name">Grekisk special</span><span class="d">oxfilé, tomat, fetaost, oliver, lök, tzatziki</span></div>
+          <div class="row"><span class="n">39</span><span class="name">Black &amp; White (halvinbakad)</span><span class="d">oxfilé, fläskfilé, räkor, sparris, bearnaisesås</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="special">
+        <div class="cat-title">
+          <h3>Specialpizzor</h3>
+          <span class="p">155:- <small>familj 380:-</small></span>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">1</span><span class="name">Padellino</span><span class="d">mozzarella, lufttorkad skinka, oliver, ruccola, svartpeppar, parmesan</span></div>
+          <div class="row"><span class="n">2</span><span class="name">Rocolta</span><span class="d">mozzarella, oxfilé, tomat, rödlök, ruccola, parmesan</span></div>
+          <div class="row"><span class="n">3</span><span class="name">Veganpizza</span><span class="d">veganost, falafel, rödlök, tomat, ruccola, citron</span></div>
+          <div class="row"><span class="n">4</span><span class="name">Aura</span><span class="d">mozzarella, fläskfilé, tomat, rödlök, ruccola, parmesan</span></div>
+          <div class="row"><span class="n">5</span><span class="name">Filips lax</span><span class="d">mozzarella, lax, räkor, citron, rödlök, ruccola, parmesan, svartpeppar</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="pan">
+        <div class="cat-title">
+          <h3>Pan pizza</h3>
+          <span class="p">145:-</span>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">1</span><span class="name">Vegas</span><span class="d">skinka, champinjoner, färska tomater</span></div>
+          <div class="row"><span class="n">2</span><span class="name">Texas</span><span class="d">salami, lök, jalapeño, tacosås</span></div>
+          <div class="row"><span class="n">3</span><span class="name">Miami</span><span class="d">kyckling, ananas, banan, curry</span></div>
+          <div class="row"><span class="n">4</span><span class="name">Hollywood</span><span class="d">oxfilé, champinjoner, lök, paprika</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="kebab">
+        <div class="cat-title">
+          <h3>Kebab</h3>
+        </div>
+        <p class="cat-note">Välj mellan kebab, gyros, kyckling och falafel. Serveras med sallad, tomat, feferoni och kebabsås.</p>
+        <div class="list">
+          <div class="row"><span class="n"></span><span class="name">Med bröd</span><span class="pr">99:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Med pommes eller ris</span><span class="pr">119:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Rulle</span><span class="pr">119:-</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="vegkebab">
+        <div class="cat-title">
+          <h3>Vegansk kebab</h3>
+        </div>
+        <p class="cat-note">Serveras med sallad, tomat, feferoni och kebabsås.</p>
+        <div class="list">
+          <div class="row"><span class="n"></span><span class="name">Med bröd</span><span class="pr">109:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Med pommes eller ris</span><span class="pr">130:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Rulle</span><span class="pr">130:-</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="burger">
+        <div class="cat-title">
+          <h3>Hamburgare</h3>
+        </div>
+        <p class="cat-note">Dressing, sallad, lök, tomat, senap och ketchup ingår.</p>
+        <div class="list">
+          <div class="row"><span class="n"></span><span class="name">90 g med bröd</span><span class="pr">80:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">90 g tallrik</span><span class="pr">105:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">150 g med bröd</span><span class="pr">99:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">150 g tallrik</span><span class="pr">119:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Högrevsburgare 160 g</span><span class="pr">129:-</span><span class="d">med pommes och ost</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="sallad">
+        <div class="cat-title">
+          <h3>Sallader</h3>
+          <span class="p">119:-</span>
+        </div>
+        <p class="cat-note">Nybakat bröd, isbergssallad, tomat, gurka och dressing ingår i alla sallader.</p>
+        <div class="list">
+          <div class="row"><span class="n">1</span><span class="name">Ost- &amp; skinksallad</span><span class="d">ost, skinka, ananas</span></div>
+          <div class="row"><span class="n">2</span><span class="name">Räksallad</span><span class="d">räkor, citron</span></div>
+          <div class="row"><span class="n">3</span><span class="name">Tonfisksallad</span><span class="d">tonfisk, rödlök, oliver, citron</span></div>
+          <div class="row"><span class="n">4</span><span class="name">Kycklingsallad</span><span class="d">kyckling, rödlök, paprika</span></div>
+          <div class="row"><span class="n">5</span><span class="name">Grekisk sallad <span class="v">(vegetarisk)</span></span><span class="d">rödlök, oliver, feferoni, salladsost</span></div>
+          <div class="row"><span class="n">6</span><span class="name">Kebabsallad</span><span class="d">kebabkött, rödlök, feferoni</span></div>
+          <div class="row"><span class="n">7</span><span class="name">Falafelsallad <span class="v">(vegetarisk)</span></span><span class="d">falafel, lök, feferoni, citron</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="pasta">
+        <div class="cat-title">
+          <h3>Pastarätter</h3>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n">1</span><span class="name">Bolognese</span><span class="pr">139:-</span><span class="d">köttfärssås, parmesanost</span></div>
+          <div class="row"><span class="n">2</span><span class="name">Carbonara</span><span class="pr">139:-</span><span class="d">bacon, lök, gräddsås, äggula, parmesanost</span></div>
+          <div class="row"><span class="n">3</span><span class="name">Kycklingpasta</span><span class="pr">149:-</span><span class="d">kyckling, lök, paprika, currysås</span></div>
+          <div class="row"><span class="n">4</span><span class="name">Oxfilépasta</span><span class="pr">159:-</span><span class="d">oxfilé, gräddsås, champinjoner, lök, paprika, parmesanost</span></div>
+          <div class="row"><span class="n">5</span><span class="name">Skaldjurspasta</span><span class="pr">149:-</span><span class="d">skaldjursmix med tomatsås och parmesanost</span></div>
+          <div class="row"><span class="n">6</span><span class="name">Kebabpasta</span><span class="pr">139:-</span><span class="d">kebabkött, lök, tomater, feferoni, gräddsås, tomatsås</span></div>
+          <div class="row"><span class="n">7</span><span class="name">Vegetarisk pasta</span><span class="pr">139:-</span><span class="d">grönsaker, gräddsås, tomatsås, ost</span></div>
+          <div class="row"><span class="n">8</span><span class="name">Laxpasta</span><span class="pr">149:-</span><span class="d">lax, lök, citron, dill, gräddsås, parmesanost</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="alacarte">
+        <div class="cat-title">
+          <h3>À la carte</h3>
+        </div>
+        <p class="cat-note">Serveras med grönsaker samt klyftpotatis eller pommes.</p>
+        <div class="list">
+          <div class="row"><span class="n">1</span><span class="name">Husets oxfilé</span><span class="pr">260:-</span><span class="d">med stekta grönsaker, rödvinssås och bearnaisesås</span></div>
+          <div class="row"><span class="n">2</span><span class="name">Black &amp; White</span><span class="pr">260:-</span><span class="d">fläskfilé och oxfilé med stekta grönsaker, rödvinssås och bearnaisesås</span></div>
+          <div class="row"><span class="n">3</span><span class="name">Filé Oscar</span><span class="pr">220:-</span><span class="d">fläskfilé med räkor, sparris och bearnaisesås</span></div>
+          <div class="row"><span class="n">4</span><span class="name">Souvlaki</span><span class="pr">220:-</span><span class="d">fläskfiléspett med tzatziki och varm tomatsås</span></div>
+          <div class="row"><span class="n">5</span><span class="name">Kycklingfilé</span><span class="pr">220:-</span><span class="d">grillad kycklingfilé med grillad tomat, paprika, tzatziki och varm tomatsås</span></div>
+          <div class="row"><span class="n">6</span><span class="name">Husets schnitzel</span><span class="pr">190:-</span><span class="d">med citron, rödvinssås och bearnaisesås</span></div>
+          <div class="row"><span class="n">7</span><span class="name">Rödspättafilé</span><span class="pr">190:-</span><span class="d">med citron och remouladsås</span></div>
+        </div>
+      </div>
+
+      <div class="cat" id="extra">
+        <div class="cat-title">
+          <h3>Tillbehör</h3>
+        </div>
+        <div class="list">
+          <div class="row"><span class="n"></span><span class="name">Sås</span><span class="pr">15:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Pizzasallad</span><span class="pr">15:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Extra grönsaker</span><span class="pr">10:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Extra kött eller skaldjur</span><span class="pr">20:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Pommes</span><span class="pr">50:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Glutenfri pizzabotten</span><span class="pr">+20:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Läsk 33 cl</span><span class="pr">20:-</span></div>
+          <div class="row"><span class="n"></span><span class="name">Läsk 2 liter</span><span class="pr">45:-</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="none" id="none">Hittade ingen rätt med det namnet eller den ingrediensen.</p>
+  </div>
+</section>
+
+<section id="bestall">
+  <div class="wrap">
+    <h2>Beställ</h2>
+    <div class="ways">
+      <div>
+        <h3>Hämta själv</h3>
+        <p>Beställ på vår hemsida och hämta hos oss. Just nu får du 10% rabatt när du beställer den vägen.</p>
+        <a class="btn" href="https://order.kabopizzeria.se/menu.aspx" target="_blank" rel="noopener">Beställ online</a>
+      </div>
+      <div>
+        <h3>Hemkörning via Foodora</h3>
+        <p>Vi kör hem maten till dörren via Foodora.</p>
+        <a class="btn light" href="https://www.foodora.se/restaurant/jlw1/kabo-restaurang-and-pizzeria" target="_blank" rel="noopener">Till Foodora</a>
+      </div>
+      <div>
+        <h3>Ring oss</h3>
+        <p>Du kan också ringa in din beställning, så har vi den klar när du kommer.</p>
+        <a class="btn light" href="tel:+4618512525">018-51 25 25</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hitta">
+  <div class="wrap visit">
+    <div>
+      <h2>Öppettider</h2>
+      <table class="hours">
+        <tr data-d="1"><td>Måndag</td><td>11.00–21.00</td></tr>
+        <tr data-d="2"><td>Tisdag</td><td>11.00–21.00</td></tr>
+        <tr data-d="3"><td>Onsdag</td><td>11.00–21.00</td></tr>
+        <tr data-d="4"><td>Torsdag</td><td>11.00–21.00</td></tr>
+        <tr data-d="5"><td>Fredag</td><td>11.00–21.00</td></tr>
+        <tr data-d="6"><td>Lördag</td><td>11.00–21.00</td></tr>
+        <tr data-d="0"><td>Söndag</td><td>12.00–21.00</td></tr>
+      </table>
+      <address>
+        <b>Kåbo Restaurang &amp; Pizzeria</b><br>
+        Döbelnsgatan 12<br>752 37 Uppsala<br>
+        <a href="tel:+4618512525">018-51 25 25</a>
+      </address>
+      <p><a href="https://www.google.com/maps/dir/?api=1&destination=D%C3%B6belnsgatan+12,+752+37+Uppsala" target="_blank" rel="noopener">Vägbeskrivning</a></p>
+      <p class="info">Fullständiga rättigheter.</p>
+    </div>
+    <div class="map">
+      <iframe title="Karta" loading="lazy" src="https://www.google.com/maps?q=D%C3%B6belnsgatan+12,+752+37+Uppsala&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Kåbo Restaurang &amp; Pizzeria</span>
+    <span><a href="https://www.facebook.com/kabobaropizzeria/" target="_blank" rel="noopener">Facebook</a> · <a href="https://kabopizzeria.se/Integritetspolicy">Integritetspolicy</a></span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+4618512525">Ring</a>
+  <a href="https://order.kabopizzeria.se/menu.aspx" target="_blank" rel="noopener">Beställ online</a>
+</div>
+
+<script>
+// sök
+const jump = document.getElementById("jump");
+const q = document.getElementById("q");
+q.addEventListener("input", () => {
+  const t = q.value.trim().toLowerCase();
+  let any = false;
+  document.querySelectorAll(".cat").forEach(cat => {
+    let n = 0;
+    cat.querySelectorAll(".row").forEach(r => { r.hidden = t && !r.textContent.toLowerCase().includes(t); if (!r.hidden) n++; });
+    cat.hidden = n === 0; any ||= n > 0;
+    jump.querySelector(`[href="#${cat.id}"]`).hidden = cat.hidden;
+  });
+  document.getElementById("none").style.display = any ? "none" : "block";
+});
+
+// markera aktuell kategori
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  jump.querySelectorAll("a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+  const on = jump.querySelector(".on"); if (on) jump.scrollLeft = on.offsetLeft - 20;
+}), {rootMargin: "-140px 0px -65% 0px"});
+document.querySelectorAll(".cat").forEach(c => io.observe(c));
+
+// dagens öppettider
+(() => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {timeZone:"Europe/Stockholm", weekday:"short", hour:"2-digit", minute:"2-digit", hourCycle:"h23"})
+    .formatToParts(new Date()).map(x => [x.type, x.value]));
+  const d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), m = +p.hour * 60 + +p.minute;
+  const opens = d === 0 ? 12 : 11;
+  document.querySelector(`.hours tr[data-d="${d}"]`)?.classList.add("today");
+  document.getElementById("today").innerHTML = m >= opens * 60 && m < 21 * 60
+    ? `<b>Öppet nu</b> · idag ${opens}–21`
+    : `Stängt just nu · öppnar ${m < opens * 60 ? "idag" : "imorgon"} kl ${m < opens * 60 ? opens : (d === 6 ? 12 : 11)}`;
+})();
+</script>
+</body>
+</html>
